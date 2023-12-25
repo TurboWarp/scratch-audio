@@ -2,7 +2,7 @@
   "name": "scratch-audio",
   "version": "0.1.0",
   "description": "audio engine for scratch 3.0",
-  "main": "./src/index.js",
+  "main": "dist.js",
   "browser": "./src/index.js",
   "scripts": {
     "prepublishOnly": "npm run build",
