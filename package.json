@@ -1,5 +1,5 @@
 {
-  "name": "scratch-audio",
+  "name": "@turbowarp/scratch-audio",
   "version": "0.1.0",
   "description": "audio engine for scratch 3.0",
   "main": "dist.js",
@@ -14,14 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LLK/scratch-audio.git"
+    "url": "git+https://github.com/TurboWarp/scratch-audio.git"
   },
-  "author": "Massachusetts Institute of Technology",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/LLK/scratch-audio/issues"
+    "url": "https://github.com/TurboWarp/scratch-audio/issues"
   },
-  "homepage": "https://github.com/LLK/scratch-audio#readme",
+  "homepage": "https://github.com/TurboWarp/scratch-audio#readme",
   "dependencies": {
     "audio-context": "1.0.1",
     "minilog": "^3.0.1",
