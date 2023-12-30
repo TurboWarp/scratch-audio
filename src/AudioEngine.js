@@ -219,7 +219,7 @@ class AudioEngine {
      */
     decodeSoundPlayer (sound) {
         return this._decodeSound(sound)
-        .then(([id, buffer]) => new SoundPlayer(this, {id, buffer}));
+            .then(([id, buffer]) => new SoundPlayer(this, {id, buffer}));
     }
 
     /**
