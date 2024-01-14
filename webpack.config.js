@@ -24,7 +24,6 @@ module.exports = {
     },
     externals: {
         'audio-context': true,
-        'minilog': true,
         'startaudiocontext': true
     }
 };
