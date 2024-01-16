@@ -23,8 +23,8 @@
   "homepage": "https://github.com/TurboWarp/scratch-audio#readme",
   "dependencies": {
     "@turbowarp/nanolog": "^0.1.0",
-    "audio-context": "1.0.1",
-    "startaudiocontext": "1.2.1"
+    "@turbowarp/startaudiocontext": "^1.0.0",
+    "audio-context": "1.0.1"
   },
   "devDependencies": {
     "babel-core": "6.26.3",

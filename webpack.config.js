@@ -23,7 +23,6 @@ module.exports = {
         }]
     },
     externals: {
-        'audio-context': true,
-        'startaudiocontext': true
+        'audio-context': true
     }
 };
