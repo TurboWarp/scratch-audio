@@ -1,5 +1,4 @@
 const StartAudioContext = require('./StartAudioContext');
-const AudioContext = require('audio-context');
 
 const log = require('./log');
 const uid = require('./uid');
@@ -36,12 +35,23 @@ const decodeAudioData = function (audioContext, buffer) {
 };
 
 /**
+ * @returns {AudioContext} A new audio context.
+ */
+const makeAudioContext = () => {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) {
+        throw new Error('Browser does not support AudioContext');
+    }
+    return new AudioContext();
+};
+
+/**
  * There is a single instance of the AudioEngine. It handles global audio
  * properties and effects, loads all the audio buffers for sounds belonging to
  * sprites.
  */
 class AudioEngine {
-    constructor (audioContext = new AudioContext()) {
+    constructor (audioContext = makeAudioContext()) {
         /**
          * AudioContext to play and manipulate sounds with a graph of source
          * and effect nodes.

@@ -29,8 +29,7 @@
   },
   "dependencies": {
     "@turbowarp/nanolog": "^0.2.0",
-    "@turbowarp/startaudiocontext": "^1.0.0",
-    "audio-context": "1.0.1"
+    "@turbowarp/startaudiocontext": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "6.26.3",
