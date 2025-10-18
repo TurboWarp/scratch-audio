@@ -42,7 +42,25 @@ const makeAudioContext = () => {
     if (!AudioContext) {
         throw new Error('Browser does not support AudioContext');
     }
-    return new AudioContext();
+
+    const audioContextWithDefaultRate = new AudioContext();
+
+    // By default, browsers will use the sample rate of the output device. For people who have this
+    // configured very high, this can result in extreme increases in memory usage because we
+    // pre-decode all sounds into buffers at this sample rate.
+    if (audioContextWithDefaultRate.sampleRate > 48000) {
+        try {
+            return new AudioContext({
+                sampleRate: 48000
+            });
+        } catch (e) {
+            // If browser can't support our requested rate, we'll have to continue with whatever
+            // rate we got earlier, even if it's not going to be ideal.
+            return audioContextWithDefaultRate;
+        }
+    }
+
+    return audioContextWithDefaultRate;
 };
 
 /**
