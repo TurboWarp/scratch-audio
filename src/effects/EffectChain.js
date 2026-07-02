@@ -88,7 +88,7 @@ class EffectChain {
      * @param {SoundPlayer} soundPlayer - a sound player to stop managing
      */
     removeSoundPlayer (soundPlayer) {
-        this._soundPlayers.remove(soundPlayer);
+        this._soundPlayers.delete(soundPlayer);
     }
 
     /**
